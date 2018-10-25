@@ -1,0 +1,10 @@
+
+publish {
+    userOrg = 'sjianjun'
+    groupId = 'com.sjianjun'
+    artifactId = 'rxutils'
+    publishVersion = '1.0.0'
+    desc = 'android rxjava ext '
+    website = 'https://github.com/lTBeL/android-libs'
+//   打包上传         ./gradlew clean build bintrayUpload -PbintrayUser=BINTRAY_USERNAME -PbintrayKey=BINTRAY_KEY -PdryRun=false
+}

@@ -1,3 +1,4 @@
+apply plugin: 'com.novoda.bintray-release'
 apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 
@@ -27,7 +28,6 @@ android {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-
     implementation 'com.android.support:appcompat-v7:28.0.0'
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
@@ -38,15 +38,4 @@ dependencies {
 repositories {
     mavenCentral()
 }
-apply plugin: 'maven'
-group = MAVEN_GROUP
-version = '1.0.0'
-
-uploadArchives {
-    repositories {
-        mavenDeployer {
-            repository(url: uri('../repo'))
-            pom.artifactId = 'rxutils'
-        }
-    }
-}
+apply from: 'publish.gradle'
