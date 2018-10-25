@@ -38,3 +38,15 @@ dependencies {
 repositories {
     mavenCentral()
 }
+apply plugin: 'maven'
+group = MAVEN_GROUP
+version = '1.0.0'
+
+uploadArchives {
+    repositories {
+        mavenDeployer {
+            repository(url: uri('../repo'))
+            pom.artifactId = 'rxutils'
+        }
+    }
+}
