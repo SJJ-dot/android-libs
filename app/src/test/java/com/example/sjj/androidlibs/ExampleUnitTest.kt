@@ -1,4 +1,4 @@
-package com.example.sjj.android_libs
+package com.example.sjj.androidlibs
 
 import org.junit.Test
 
