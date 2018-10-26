@@ -1,3 +1,6 @@
+apply plugin: 'com.novoda.bintray-release'
+
+
 
 publish {
     userOrg = 'sjianjun'
@@ -6,5 +9,5 @@ publish {
     publishVersion = '1.0.0'
     desc = 'android rxjava ext '
     website = 'https://github.com/lTBeL/android-libs'
-//   打包上传         ./gradlew clean build bintrayUpload -PbintrayUser=BINTRAY_USERNAME -PbintrayKey=BINTRAY_KEY -PdryRun=false
+//   打包上传         .\gradlew clean build bintrayUpload -PbintrayUser=sjianjun -PbintrayKey=BINTRAY_KEY -PdryRun=false
 }
