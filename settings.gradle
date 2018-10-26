@@ -1,1 +1,1 @@
-include ':app', ':rxutils'
+include ':app', ':rxutils', ':permission'

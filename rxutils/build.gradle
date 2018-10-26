@@ -39,4 +39,10 @@ dependencies {
 repositories {
     mavenCentral()
 }
-apply from: 'publish.gradle'
+
+ext{
+    publishArtifactId = 'rxutils'
+    publishVersion = '1.0.0'
+    publishdDesc = 'android rxjava ext '
+}
+apply from: rootProject.file('gradle/publish.gradle')

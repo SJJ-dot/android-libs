@@ -27,14 +27,3 @@ task clean(type: Delete) {
 }
 
 tasks.getByPath(":rxutils:releaseAndroidJavadocs").enabled = false
-
-ext {
-    Properties properties = new Properties()
-    properties.load(project.rootProject.file('local.properties').newDataInputStream())
-
-    bintrayApiKey = properties.getProperty('bintrayKey')
-
-
-    lifecycle_version = "2.0.0"
-
-}
