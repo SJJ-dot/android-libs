@@ -1,7 +1,6 @@
 package sjj.rx
 
 import android.arch.lifecycle.Lifecycle
-import android.support.v7.app.AppCompatActivity
 import io.reactivex.disposables.Disposable
 
 interface AutoDisposeEnhance {
