@@ -12,3 +12,6 @@ implementation 'com.sjianjun:permissionUtil:1.1.2'
             Log.e("de $it")
         })
 ```
+
+>request
+1、com.android.support:appcompat-v7

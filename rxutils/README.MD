@@ -29,3 +29,5 @@ class MainActivity : AppCompatActivity(), AutoDisposeEnhance {
 
 }
 ```
+>request
+1、com.android.support > 27
