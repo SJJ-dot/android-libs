@@ -42,7 +42,7 @@ repositories {
 
 ext{
     publishArtifactId = 'rxutils'
-    publishVersion = '1.0.0'
+    publishVersion = '1.0.1'
     publishdDesc = 'android rxjava ext '
 }
 apply from: rootProject.file('gradle/publish.gradle')
