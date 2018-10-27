@@ -1,7 +1,8 @@
+[MAVEN](https://bintray.com/sjianjun/maven)
 ### 用法：
 1、添加依赖
 ```groovy
-implementation 'com.sjianjun:rxutils:1.0.1'
+implementation 'com.sjianjun:rxutils:1.0.2'
 ```
 2、代码
 提供了3个Disposable的扩展方法这里使用destory演示。

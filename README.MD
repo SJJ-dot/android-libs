@@ -1,0 +1,1 @@
+[MAVEN](https://bintray.com/sjianjun/maven)
