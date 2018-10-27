@@ -7,7 +7,7 @@ apply plugin: 'kotlin-android-extensions'
 android {
     compileSdkVersion 28
     defaultConfig {
-        applicationId "com.example.sjj.android_libs"
+        applicationId "com.example.sjj.android.libs"
         minSdkVersion 15
         targetSdkVersion 28
         versionCode 1
@@ -30,9 +30,10 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
-    implementation 'io.reactivex.rxjava2:rxjava:2.2.0'
+    implementation 'io.reactivex.rxjava2:rxjava:2.2.3'
     implementation 'com.sjianjun:aLog:1.1.3'
 //    implementation 'com.sjianjun:rxutils:1.0.2'
     implementation project(":rxutils")
-    implementation 'com.sjianjun:permissionUtil:1.1.2'
+    implementation 'com.sjianjun:permissionUtil:1.1.3'
+    implementation project(":serialize")
 }
