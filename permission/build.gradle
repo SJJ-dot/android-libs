@@ -7,8 +7,8 @@ android {
     defaultConfig {
         minSdkVersion 15
         targetSdkVersion 28
-        versionCode 2
-        versionName "1.1"
+        versionCode 3
+        versionName "1.1.2"
     }
     buildTypes {
         release {
@@ -20,13 +20,13 @@ android {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation 'com.android.support:appcompat-v7:28.0.0'
-    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    compileOnly 'com.android.support:appcompat-v7:28.0.0'
+    compileOnly "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
 }
 
 ext{
     publishArtifactId='permissionUtil'
-    publishVersion = '1.1.1'
+    publishVersion = '1.1.2'
     publishdDesc = 'android permission Util '
 }
 apply from: rootProject.file('gradle/publish.gradle')
