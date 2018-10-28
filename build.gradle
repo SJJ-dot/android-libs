@@ -29,3 +29,4 @@ task clean(type: Delete) {
 tasks.getByPath(":rxutils:releaseAndroidJavadocs").enabled = false
 
 tasks.getByPath(":permission:releaseAndroidJavadocs").enabled = false
+tasks.getByPath(":serialize:releaseAndroidJavadocs").enabled = false

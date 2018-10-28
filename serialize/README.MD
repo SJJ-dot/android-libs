@@ -1,18 +1,12 @@
-package com.example.sjj.androidlibs
-
-import android.arch.lifecycle.Observer
-import android.content.Context
-import android.content.SharedPreferences
-import android.os.Bundle
-import android.support.v7.app.AppCompatActivity
-import io.reactivex.Observable
-import sjj.alog.Log
-import sjj.permission.util.requestPermissionAll
-import sjj.rx.AutoDisposeEnhance
-import sjj.rx.destroy
-import sjj.serialize.SharedPreferencesDelegate
-import sjj.serialize.SharedPreferencesLiveData
-
+[MAVEN](https://bintray.com/sjianjun/maven)
+### 用法：
+1、添加依赖
+```groovy
+implementation 'com.sjianjun:rxutils:1.0.2'
+```
+2、代码
+提供了3个Disposable的扩展方法这里使用destory演示。
+```kotlin
 class MainActivity : AppCompatActivity(), AutoDisposeEnhance {
 
     var userName by SharedPreferencesDelegate("") {getSharedPreferences("common", Context.MODE_PRIVATE)}
@@ -33,3 +27,7 @@ class MainActivity : AppCompatActivity(), AutoDisposeEnhance {
 
     }
 }
+```
+>request
+
+1、 "android.arch.lifecycle:livedata:1.1.1"
