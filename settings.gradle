@@ -1,1 +1,1 @@
-include ':app', ':rxutils', ':permission', ':serialize'
+include ':app', ':rxutils', ':permission', ':serialize', ':alog'
