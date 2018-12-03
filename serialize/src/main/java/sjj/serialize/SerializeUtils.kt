@@ -1,4 +1,4 @@
-package sjj.fiction.util
+package sjj.serialize
 
 import android.util.Base64
 import java.io.ByteArrayInputStream
