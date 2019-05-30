@@ -20,7 +20,7 @@ dependencies {
 
 ext{
     publishArtifactId = 'aLog'
-    publishVersion = '1.1.4'
-    publishdDesc = 'Android log 可以方便的将日志写入文件'
+    publishVersion = '1.2.0'
+    publishdDesc = 'Android log 日志输出小工具。支持写入文件'
 }
 apply from: rootProject.file('gradle/publish.gradle')
