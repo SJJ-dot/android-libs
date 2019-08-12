@@ -1,16 +1,13 @@
 package sjj.alog;
 
 import android.util.Log;
+import sjj.alog.file.LogFile;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.StringReader;
 import java.net.UnknownHostException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
-import java.util.Locale;
-
-import sjj.alog.file.LogFile;
+import java.util.Calendar;
 
 /**
  * Created by SJJ on 2017/3/5.
@@ -21,7 +18,6 @@ import sjj.alog.file.LogFile;
     private Config config;
     private LogFile logFile;
     private String lineSeparator = getLineSeparator();
-    private SimpleDateFormat hms = new SimpleDateFormat("HH:mm:ss ", Locale.CHINA);
 
      LogUtils(Config config) {
         this.config = config;
@@ -88,7 +84,15 @@ import sjj.alog.file.LogFile;
 
     private void writeToFile(int lev, String tag, String msg) {
         if (!isHoldLog(lev)) return;
-        StringBuilder sb = new StringBuilder(hms.format(new Date()));
+        Calendar calendar = Calendar.getInstance();
+        StringBuilder sb = new StringBuilder();
+        int hour = calendar.get(Calendar.HOUR_OF_DAY);
+        sb.append(hour < 10 ? ("0" + hour):hour).append(":");
+        int min = calendar.get(Calendar.MINUTE);
+        sb.append(min < 10 ? ("0" + min):min).append(":");
+        int second = calendar.get(Calendar.SECOND);
+        sb.append(second < 10 ? ("0" + second) : second).append(".");
+        sb.append(calendar.get(Calendar.MILLISECOND)).append(" ");
         switch (lev) {
             case Config.INFO:
                 sb.append("I:");
@@ -106,7 +110,6 @@ import sjj.alog.file.LogFile;
         if (logFile != null)
             logFile.push(sb
                     .append(tag)
-                    .append(lineSeparator)
                     .append(msg)
                     .toString());
     }
@@ -127,16 +130,5 @@ import sjj.alog.file.LogFile;
         if (throwable == null) return "";
         if (throwable instanceof UnknownHostException) return "UnknownHostException";
         return Log.getStackTraceString(throwable);
-//        StringBuilder buffer = new StringBuilder();
-//        buffer.append(throwable.getClass()).append(", ").append(throwable.getMessage()).append("\n");
-//        while (throwable != null) {
-//            for (StackTraceElement element : throwable.getStackTrace()) {
-//                buffer.append(element.toString()).append("\n");
-//            }
-//            throwable = throwable.getCause();
-//            if (throwable != null)
-//                buffer.append("caused by ");
-//        }
-//        return buffer.toString();
     }
 }

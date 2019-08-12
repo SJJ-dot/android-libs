@@ -18,6 +18,7 @@ class MainActivity : AppCompatActivity(), AutoDisposeEnhance {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        Config.getDefaultConfig().hold = true
         val logger = Logger(Config.getDefaultConfig())
         logger.e("aaaa")
         logger.e("aaaa",Exception())
