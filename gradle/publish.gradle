@@ -20,7 +20,7 @@ task sourceJar(type: Jar) {
 artifacts {
     archives sourceJar
 }
-//maven 打包得时候混淆会出错
+//maven 打包得时候混淆会出错 不能开 multiDexEnabled
 uploadArchives{
     repositories.mavenDeployer{
         // 配置本地仓库路径，项目根目录下的repository目录中
@@ -30,3 +30,4 @@ uploadArchives{
         pom.version = publishVersion // 版本号
     }
 }
+ 
