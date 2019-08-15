@@ -18,7 +18,7 @@ buildscript {
 allprojects {
     repositories {
         maven {
-            url 'file:///D:/github/android-libs/repository'
+            url new File(rootDir,"repository").toURI()
         }
         google()
         jcenter()
