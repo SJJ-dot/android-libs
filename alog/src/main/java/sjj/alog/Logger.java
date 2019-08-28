@@ -6,10 +6,13 @@ package sjj.alog;
 
 public class Logger {
     private final LogUtils logUtils;
+    private Config config;
 
     public Logger(Config config) {
         this.logUtils = new LogUtils(config);
+        this.config = config;
     }
+
     //================debug=======================
     public void d(Object object) {
         log(Config.DEBUG, getCallM(), String.valueOf(object), null);
@@ -77,13 +80,14 @@ public class Logger {
     public void e(int sq, Object object, Throwable throwable) {
         log(Config.ERROR, getCallM(sq), String.valueOf(object), throwable);
     }
+
     //===========================utils=========================
     private void log(int lev, String tag, String message, Throwable throwable) {
         logUtils.l(lev, tag, message, throwable);
     }
 
     private String getCallM() {
-        return getCallM(1);
+        return config.enableCallMethod ? getCallM(1) : "";
     }
 
     private String getCallM(int sq) {

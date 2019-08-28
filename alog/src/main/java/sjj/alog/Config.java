@@ -16,6 +16,10 @@ public class Config {
     public static final int WARN = 3;
     public static final int ERROR = 4;
     /**
+     * 是否要输出调用方法
+     */
+    public boolean enableCallMethod = true;
+    /**
      * log输出控制
      */
     public boolean enable = true;

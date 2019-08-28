@@ -19,6 +19,7 @@ class MainActivity : AppCompatActivity(), AutoDisposeEnhance {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 //        Config.getDefaultConfig().hold = true
+        Config.getDefaultConfig().enableCallMethod = false
         val logger = Logger(Config.getDefaultConfig())
         logger.e("aaaa")
         logger.e("aaaa",Exception())
